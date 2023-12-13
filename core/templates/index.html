@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="card text-center">
+    {% for article in articles %}
+    <div class="card-body">
+      <h5 class="card-title">{{ article.title }}</h5>
+      <p class="card-text">{{ article.content }}</p>
+      <a href="{{url_for('article', id=article.id)}}" class="btn btn-primary">Подробнее</a>
+    </div>
+    <div class="card-footer text-body-secondary">
+      /12/13/2023
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

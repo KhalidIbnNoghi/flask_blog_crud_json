@@ -1,0 +1,9 @@
+<div class="card text-center">
+    <div class="card-body">
+      <h3 class="card-title">{{ article.title }}</h3>
+      <p class="card-text">{{ article.content }}</p>
+        <a href="{{url_for('delete', id=article.id)}}"><button type="button" class="btn btn-danger">Удалить</button></a>
+        <a href="{{url_for('edit', id=article.id)}}"><button type="button" class="btn btn-primary">Редактировать</button></a>
+        </div>
+    </div>
+  </div>
